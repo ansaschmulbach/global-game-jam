@@ -19,7 +19,7 @@ public abstract class Ingredient : MonoBehaviour
         } else if (Input.GetKeyDown("i"))
         {
             Inventory();
-            Debug.Log(GameManager.instance.gameState.inventory.GetRecipeLine());
+            //Debug.Log(GameManager.instance.gameState.inventory.GetRecipeLine());
         }
     }
     
@@ -30,10 +30,11 @@ public abstract class Ingredient : MonoBehaviour
 
     void Inventory()
     {
-        GameManager.instance.gameState.inventory = this;
+        GameManager.instance.gameState.inventory = this.gameObject;
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public abstract string GetRecipeLine();
-    protected abstract void Cook();
+    public abstract void Cook();
     
 }

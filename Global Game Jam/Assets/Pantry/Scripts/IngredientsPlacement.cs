@@ -13,22 +13,20 @@ public class IngredientsPlacement : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        int height = 1210 ;
-        int width = 750;
-       
-        int low = (0 - width)/2;
-        int high = width / 2;
-        int rand = random.Next(low, high);
-        foreach (GameObject i in ingredients)
-        {
-            rand = random.Next(low, high);
-            GameObject ingredient = Instantiate(i, new Vector3(rand, 0, 0), Quaternion.identity);
-            ingredient.transform.SetParent(pantryFrame.transform, false);
-        }
-        
-    }
+    // void Start(int height, int width)
+    // {
+    //     int low = (0 - width)/2;
+    //     int hight = width / 2;
+    //
+    //     int x = 0;
+    //     foreach (int i in ingredients)
+    //     {
+    //         x = random.Next(low, high);
+    //         GameObject ingredient = Instantiate(i, new Vector3(x, 0, 0), Quaternion.identity);
+    //         ingredient.transform.SetParent(Background.transform, false);
+    //     }
+    //     
+    // }
 
     // Update is called once per frame
     void Update()
