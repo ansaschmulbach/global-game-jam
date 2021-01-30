@@ -13,6 +13,7 @@ public class IngredientsPlacement : MonoBehaviour
 
 
     // Start is called before the first frame update
+
     void Start()
     {
         int height = 750;
@@ -48,5 +49,3 @@ public class IngredientsPlacement : MonoBehaviour
         
     }
 }
-
-
