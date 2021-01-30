@@ -24,7 +24,7 @@ public class furnitureController : MonoBehaviour
 
     void OnMouseDown(){
         setPlayerTarget();
-        furniture.Cook();
+        furniture.Select();
     }
 
 
