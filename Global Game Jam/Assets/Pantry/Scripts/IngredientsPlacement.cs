@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Text;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class IngredientsPlacement : MonoBehaviour
 {
-    public List<GameObject> ingredients;
+    [SerializeField] public List<GameObject> ingredients;
     public GameObject frame;
-    private Random random = new Random();
+    public GameObject pantryFrame;
+    public System.Random random = new System.Random();
+
 
     // Start is called before the first frame update
     // void Start(int height, int width)
@@ -30,3 +34,5 @@ public class IngredientsPlacement : MonoBehaviour
         
     }
 }
+
+
