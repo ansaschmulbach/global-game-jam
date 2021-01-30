@@ -13,9 +13,10 @@ public class IngredientsPlacement : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start(int height, int width)
+    void Start()
     {
-     
+        int height = 1210 ;
+        int width = 750;
        
         int low = (0 - width)/2;
         int high = width / 2;
