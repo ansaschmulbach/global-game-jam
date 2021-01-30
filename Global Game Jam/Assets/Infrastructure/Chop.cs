@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Chop : Ingredient
 {
-
-    
     
     [SerializeField] private string name;
     private SpriteRenderer spriteR;
@@ -22,8 +20,9 @@ public class Chop : Ingredient
     }
 
     /** DEBUGGING PURPOSES ONLY **/
-    protected override void Cook()
+    public override void Cook()
     {
         this.spriteR.color = Color.red;
+        
     }
 }

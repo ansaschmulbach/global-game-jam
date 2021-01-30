@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameState
 {
-    public Ingredient inventory;
-    
+    public GameObject inventory;
+    public Furniture selectedFurniture;
+
 }
