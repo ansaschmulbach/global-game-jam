@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameState gameState = new GameState();
 
-    void Start()
+    void Awake()
     {
-        if (GameManager.instance != null)
+        if (GameManager.instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
