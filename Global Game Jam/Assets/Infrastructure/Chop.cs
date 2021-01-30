@@ -6,6 +6,8 @@ using UnityEngine;
 public class Chop : Ingredient
 {
 
+    
+    
     [SerializeField] private string name;
     private SpriteRenderer spriteR;
 
