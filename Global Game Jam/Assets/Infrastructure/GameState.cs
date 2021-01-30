@@ -6,5 +6,5 @@ public class GameState
 {
     public GameObject inventory;
     public Furniture selectedFurniture;
-    
+
 }
