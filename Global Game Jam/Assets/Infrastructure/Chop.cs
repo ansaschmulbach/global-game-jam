@@ -6,7 +6,7 @@ public class Chop : Ingredient
 {
 
     [SerializeField] private string name;
-    
+
     protected override string GetRecipeLine()
     {
         return "Chop a " + name;
