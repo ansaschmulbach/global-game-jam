@@ -84,7 +84,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8272433191201741708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
@@ -128,3 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003702638caa74795b74edb0f4919bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredients: []
+  pantryFrame: {fileID: 0}
+  tempIngredient: {fileID: 0}
