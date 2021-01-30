@@ -9,7 +9,13 @@ using UnityEngine;
 public class furnitureController : MonoBehaviour
 {
     public ClickMove player;
+    private Furniture furniture;
 
+    void Start()
+    {
+        furniture = GetComponent<Furniture>();
+    }
+    
     public void setPlayerTarget(){
         Debug.Log("Clicked");
         Vector3 pos = this.transform.position;
@@ -18,6 +24,7 @@ public class furnitureController : MonoBehaviour
 
     void OnMouseDown(){
         setPlayerTarget();
+        furniture.Cook();
     }
 
 

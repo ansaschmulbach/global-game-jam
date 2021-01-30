@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class GameState
 {
-    public Ingredient inventory;
+    public GameState inventory;
     
 }
