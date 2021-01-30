@@ -18,21 +18,21 @@ public class Furniture : MonoBehaviour
     
     public void Select()
     {
-        if (gs.selectedFurniture != null)
-        {
-            gs.selectedFurniture.Deselect();
-        }
-
-        gs.selectedFurniture = this;
-        isSelected = true;
-        spriteRenderer.color = Color.gray;
-        
         GameObject inv = gs.inventory;
-        if (inv.TryGetComponent(out Ingredient ingredient))
+        if (inv != null && inv.TryGetComponent(out Ingredient ingredient))
         {
             Vector3 pos = this.transform.position + offset;
             inv.transform.position = pos;
             inv.GetComponent<SpriteRenderer>().enabled = true;
+            
+            if (gs.selectedFurniture != null)
+            {
+                gs.selectedFurniture.Deselect();
+            }
+
+            gs.selectedFurniture = this;
+            isSelected = true;
+            spriteRenderer.color = Color.gray;
         }
         
     }
