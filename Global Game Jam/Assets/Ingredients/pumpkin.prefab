@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6307806912951180285}
   - component: {fileID: 7305257150417455761}
   m_Layer: 8
-  m_Name: Ingredient 1 (12)
+  m_Name: pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11941147, y: -0.029418945}
+  m_Offset: {x: -1.9565544, y: -5.7598877}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -193,5 +193,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 79.59986, y: 73.39844}
+  m_Size: {x: 59.30117, y: 58.70813}
   m_EdgeRadius: 0

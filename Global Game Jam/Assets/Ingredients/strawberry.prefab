@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8238926368350747284}
   - component: {fileID: 4665205548618329080}
   m_Layer: 8
-  m_Name: Ingredient 1 (9)
+  m_Name: strawberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11941147, y: -0.029418945}
+  m_Offset: {x: -0.97618484, y: -15.385101}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -193,5 +193,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 79.59986, y: 73.39844}
+  m_Size: {x: 38.195107, y: 37.84308}
   m_EdgeRadius: 0
