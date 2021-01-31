@@ -59,3 +59,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.DS_Store
+Global Game Jam/.DS_Store
+Global Game Jam/Assets/.DS_Store
+Global Game Jam/Assets/Infrastructure/.DS_Store
+Global Game Jam/Assets/Pantry/.DS_Store
+Global Game Jam/Assets/Pantry/Scripts/.DS_Store
