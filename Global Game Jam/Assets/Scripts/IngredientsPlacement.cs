@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class IngredientsPlacement : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> ingredients;
+
+    private const int NumPerShelf = 10;
+    private List<GameObject> ingredients;
     public GameObject pantryFrame;
     public GameObject tempIngredient;
     public System.Random random = new System.Random();
@@ -21,6 +23,11 @@ public class IngredientsPlacement : MonoBehaviour
 
     // Start is called before the first frame update
 
+    void Awake()
+    {
+        ingredients = FindObjectOfType<IngredientsManager>().ingredientsPrefabs;
+    }
+    
     void Start()
     {
         /*
@@ -38,30 +45,32 @@ public class IngredientsPlacement : MonoBehaviour
         for(int i = 0; i < 5; i ++)// shelves
         {
             
-            for (int j = 0; j < 50; j ++) {//ingredients
-                if (count >= 20)
+            for (int j = 0; j < NumPerShelf; j ++) {//ingredients
+                if (count >= ingredients.Count)
                 {
                     count = 0;
                 }
                 rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
-                ingredient.transform.SetParent(pantryFrame.transform, false);
+                //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
+                GameObject ingredient = Instantiate(ingredients[count], new Vector3(0, 0, -1), Quaternion.identity);
+                // ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
                 count++;
             }
             
         }
 
-        for(int j = 0; j < 50; j ++) {//last shelf
-            if (count >= 20)
+        for(int j = 0; j < NumPerShelf; j ++) {//last shelf
+            if (count >= ingredients.Count)
             {
                 count = 0;
                 Console.WriteLine("high");
             }
             Console.WriteLine("hi");
             rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -5*127-50, -1), Quaternion.identity);
-                ingredient.transform.SetParent(pantryFrame.transform, false);
+                //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -5*127-50, -1), Quaternion.identity);
+                GameObject ingredient = Instantiate(ingredients[count], Vector3.zero, Quaternion.identity);
+                // ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
             count++;
         }
@@ -73,7 +82,7 @@ public class IngredientsPlacement : MonoBehaviour
     void Update()
     {
         int rand = random.Next(0, 1000);
-        int randNum = random.Next(low, high);
+        // int randNum = random.Next(low, high);
         int count = 0;
         if (rand == 20)
         {
@@ -84,7 +93,7 @@ public class IngredientsPlacement : MonoBehaviour
                 //i.transform.position = new Vector3(random.Next(-500, 1110), -random.Next(0, 6) * 127 - 75, -1);
 
                 //i.transform.position = new Vector3(random.Next(-150, 932), random.Next(-500, 200), 0);
-                i.transform.position = new Vector3(random.Next(-10, 10), random.Next(-5, 7), 0);
+                i.transform.position = new Vector3(random.Next(0, 0), random.Next(0, 0), 0);
                 //i.transform.SetParent(pantryFrame.transform, false);
                 count++;
 
