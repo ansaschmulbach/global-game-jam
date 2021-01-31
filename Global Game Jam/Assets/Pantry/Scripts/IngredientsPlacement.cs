@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class IngredientsPlacement : MonoBehaviour
     public GameObject pantryFrame;
     public GameObject tempIngredient;
     public System.Random random = new System.Random();
-
+    private static System.Timers.Timer timer;
 
     // Start is called before the first frame update
 
@@ -46,6 +47,11 @@ public class IngredientsPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int rand = random.Next(1, 10000);
+        if (rand == 20)
+        {
+
+        }
+
     }
 }
