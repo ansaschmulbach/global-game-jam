@@ -8,17 +8,17 @@ public class ClickMove : MonoBehaviour
     public float speed = 2.0f;
     public Vector3 target;
     private float step = 0.0f;
+    private Animator playerAnimator;
 
-    public void setTargetToPointer(){
-        Debug.Log("Clicked");
-        Debug.Log(Input.mousePosition);
-        this.target = Input.mousePosition;
+    public void setAnimator(){
+		//playerAnimator.SetFloat("speed", Mathf.Abs(this.speed));
     }
 
     void Awake()
     {
         Debug.Log("Hello!");
-        this.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+        this.playerAnimator = GetComponent<Animator>();
+        this.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -26,5 +26,16 @@ public class ClickMove : MonoBehaviour
     {
         this.step = this.speed * Time.deltaTime;
         this.transform.position = Vector3.MoveTowards(this.transform.position, this.target, step);
+        float mSpeed = Input.GetAxis("Horizontal");
+
+        float distance = (this.transform.position - target).x;
+        print(distance);
+        playerAnimator.SetFloat("speed", Mathf.Abs(distance));
+
+        if(distance < 0){
+            transform.localScale = new Vector2(-1.0f, 1.0f);
+        } else {
+            transform.localScale = new Vector2(1.0f, 1.0f);
+        }
     }
 }
