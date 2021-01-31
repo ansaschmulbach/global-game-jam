@@ -41,25 +41,20 @@ public class IngredientsPlacement : MonoBehaviour
         int rand = random.Next(low, high);
         int count = 0;
         
- 
-        for(int i = 0; i < 5; i ++)// shelves
-        {
-            
-            for (int j = 0; j < NumPerShelf; j ++) {//ingredients
-                if (count >= ingredients.Count)
-                {
-                    count = 0;
-                }
-                rand = random.Next(low, high);
-                //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
-                GameObject ingredient = Instantiate(ingredients[count], new Vector3(0, 0, -1), Quaternion.identity);
-                // ingredient.transform.SetParent(pantryFrame.transform, false);
-                instIngredients.Add(ingredient);
-                count++;
-            }
+        
+        for (int j = 0; j < ingredients.Count; j ++) {//ingredients
+            //Debug.log(ingredients[j]);
+            int tier = random.Next(-8, 8);
+            rand = random.Next(-10, 10);
+            //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
+            GameObject ingredient = Instantiate(ingredients[j], new Vector3(rand, tier, 0), Quaternion.identity);
+            // ingredient.transform.SetParent(pantryFrame.transform, false);
+            instIngredients.Add(ingredient);
             
         }
-
+    } 
+        
+    /*
         for(int j = 0; j < NumPerShelf; j ++) {//last shelf
             if (count >= ingredients.Count)
             {
@@ -75,12 +70,13 @@ public class IngredientsPlacement : MonoBehaviour
             count++;
         }
         
-    }
+    }*/
 
 
     // Update is called once per frame
     void Update()
     {
+        /*
         int rand = random.Next(0, 1000);
         // int randNum = random.Next(low, high);
         int count = 0;
@@ -102,7 +98,7 @@ public class IngredientsPlacement : MonoBehaviour
 
 
 
-        }
+        }*/
 
     }
 }

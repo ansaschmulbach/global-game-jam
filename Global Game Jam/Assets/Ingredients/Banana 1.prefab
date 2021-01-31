@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7865505129718025978}
   - component: {fileID: 8191145867699575680}
   - component: {fileID: 6930935740648477577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Banana 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 02000000
+  chopped: {fileID: 0}
 --- !u!61 &2020876183543667811
 BoxCollider2D:
   m_ObjectHideFlags: 0
