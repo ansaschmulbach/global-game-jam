@@ -146,3 +146,4 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 01000000
+  wellDoneImg: {fileID: 21300000, guid: c0d928ee228ce82c9ba1084a6a64d8dc, type: 3}

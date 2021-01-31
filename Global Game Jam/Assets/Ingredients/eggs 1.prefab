@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 689084414716830342}
   - component: {fileID: 337372623519769921}
   - component: {fileID: 8467591441825642456}
+  - component: {fileID: 3681193232650374087}
   m_Layer: 0
   m_Name: eggs 1
   m_TagString: Untagged
@@ -130,3 +131,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3681193232650374087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689084414716830340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1535f96643ecc9ad2b8cfe69c58b503e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 
+  wellDoneImg: {fileID: 21300000, guid: 1a539fbd0cd538a7da6207510e8901d7, type: 3}
