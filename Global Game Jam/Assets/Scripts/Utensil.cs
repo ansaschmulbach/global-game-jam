@@ -32,7 +32,6 @@ public abstract class Utensil : MonoBehaviour
     {
         if (parent.IsSelected() && gm.gameState.inventory && Use())
         {
-            Debug.Log("true");
         }
         else if (ing != null)
         {

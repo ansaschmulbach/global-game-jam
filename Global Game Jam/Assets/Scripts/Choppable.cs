@@ -23,7 +23,6 @@ public class Choppable : Ingredient
     /** DEBUGGING PURPOSES ONLY **/
     protected override void CookIngredient()
     {
-        Debug.Log("hello! chopped");
         this.spriteR.sprite = chopped;
     }
 
