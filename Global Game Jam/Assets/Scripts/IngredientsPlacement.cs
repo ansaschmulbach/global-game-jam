@@ -17,7 +17,7 @@ public class IngredientsPlacement : MonoBehaviour
 
     private int low = 100;
     private int high = 1210 - 100;
-    private List<GameObject> instIngredients;
+    private List<GameObject> instIngredients = new List<GameObject>();
 
     // Start is called before the first frame update
 
@@ -32,6 +32,7 @@ public class IngredientsPlacement : MonoBehaviour
          */
 
         int rand = random.Next(low, high);
+        
  
         for(int i = 0; i < 5; i ++)// shelves
         {

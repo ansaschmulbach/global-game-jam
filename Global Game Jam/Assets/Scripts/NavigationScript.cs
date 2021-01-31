@@ -17,8 +17,9 @@ public class NavigationScript : MonoBehaviour
         
         GameManager.instance.LoadKitchen();
     }
-    public void HAYO()
-    {
-        print("HAYO");
-    }
+    
+    // public void HAYO()
+    // {
+    //     print("HAYO");
+    // }
 }
