@@ -6,7 +6,6 @@ using UnityEngine;
 public class Choppable : Ingredient
 {
     
-    [SerializeField] private string name;
     private SpriteRenderer spriteR;
 
     void Start()
@@ -23,6 +22,10 @@ public class Choppable : Ingredient
     protected override void CookIngredient()
     {
         this.spriteR.color = Color.red;
-        
+    }
+
+    protected override Commands getCommand()
+    {
+        return Commands.CHOP;
     }
 }
