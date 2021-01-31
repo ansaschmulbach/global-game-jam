@@ -14,9 +14,10 @@ public class NavigationScript : MonoBehaviour
 
     public void GoToKitchen()
     {
-        
+        print("To Kitchen!");
         GameManager.instance.LoadKitchen();
     }
+
     public void HAYO()
     {
         print("HAYO");
