@@ -7,24 +7,38 @@ using UnityEngine;
 public class IngredientsPlacement : MonoBehaviour
 {
     [SerializeField] public List<GameObject> ingredients;
-    public GameObject frame;
     public GameObject pantryFrame;
+    public GameObject tempIngredient;
     public System.Random random = new System.Random();
 
 
     // Start is called before the first frame update
-    void Start(int height, int width)
+
+    void Start()
     {
-     
+        int height = 750;
+        int width = 1210;
        
-        int low = (0 - width)/2;
-        int high = width / 2;
+        int low = 100;
+        int high = width-100;
         int rand = random.Next(low, high);
-        foreach (GameObject i in ingredients)
+        
+
+        //foreach (GameObject i in ingredients)
+        for(int i = 0; i < 5; i ++)// shelves
         {
-            rand = random.Next(low, high);
-            GameObject ingredient = Instantiate(i, new Vector3(rand, 0, 0), Quaternion.identity);
-            ingredient.transform.SetParent(pantryFrame.transform, false);
+            for(int j = 0; j < 10; j ++) {//ingredients
+                rand = random.Next(low, high);
+                GameObject ingredient = Instantiate(tempIngredient, new Vector3(rand, -i*127-75, 0), Quaternion.identity);
+                ingredient.transform.SetParent(pantryFrame.transform, false);
+            }
+            
+        }
+
+        for(int j = 0; j < 10; j ++) {//last shelf
+                rand = random.Next(low, high);
+                GameObject ingredient = Instantiate(tempIngredient, new Vector3(rand, -5*127-50, 0), Quaternion.identity);
+                ingredient.transform.SetParent(pantryFrame.transform, false);
         }
         
     }
@@ -35,5 +49,3 @@ public class IngredientsPlacement : MonoBehaviour
         
     }
 }
-
-
