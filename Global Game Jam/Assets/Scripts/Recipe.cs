@@ -33,9 +33,9 @@ public class Recipe : MonoBehaviour
         // Debug.Log(ingredientList.Count);
         createNewRandomRecipe();
         // Debug.Log(currentRecipe[currentStepIndex]);
-        kitchenDisplay = FindObjectOfType<KitchenDisplay>();
-        kitchenDisplay.UpdateRecipe();
-        kitchenDisplay.UpdateScore();
+        // kitchenDisplay = FindObjectOfType<KitchenDisplay>();
+        // kitchenDisplay.UpdateRecipe();
+        // kitchenDisplay.UpdateScore();
     }
 
     private static void createNewRandomRecipe()
