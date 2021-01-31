@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3360421892793631324}
   - component: {fileID: 6944901669823085109}
   - component: {fileID: 5947450938299312985}
+  - component: {fileID: 3039886670816589363}
   m_Layer: 8
   m_Name: Potato
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 46.960457, y: 23.83319}
   m_EdgeRadius: 0
+--- !u!114 &3039886670816589363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360421892793631322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9404e6ec288744b4ba4156960072427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 02000000

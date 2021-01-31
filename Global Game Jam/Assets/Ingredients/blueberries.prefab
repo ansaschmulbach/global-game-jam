@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7800295018809092741}
   - component: {fileID: 2486994491394101996}
   - component: {fileID: 1183105348350804864}
+  - component: {fileID: 8806046336743076976}
   m_Layer: 8
   m_Name: blueberries
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 37.964455, y: 41.20099}
   m_EdgeRadius: 0
+--- !u!114 &8806046336743076976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800295018809092739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fbfe839e60c419eb7f54c8efdb9c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 00000000

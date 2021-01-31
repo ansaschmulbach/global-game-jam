@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1865181864063842836}
   - component: {fileID: 6278536472819516029}
   - component: {fileID: 7334534153528627985}
+  - component: {fileID: 3850031679333461502}
   m_Layer: 8
   m_Name: grapes
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 46.450134, y: 31.220215}
   m_EdgeRadius: 0
+--- !u!114 &3850031679333461502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865181864063842834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fbfe839e60c419eb7f54c8efdb9c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 00000000

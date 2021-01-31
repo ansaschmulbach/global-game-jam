@@ -16,7 +16,6 @@ public class ClickMove : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Hello!");
         this.playerAnimator = GetComponent<Animator>();
         this.transform.position = new Vector3(0.0f, 3.0f, 0.0f);
     }
