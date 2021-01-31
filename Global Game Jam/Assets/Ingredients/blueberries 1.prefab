@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2962013098351781196}
   - component: {fileID: 2604671830978323083}
   - component: {fileID: 6127670842657353746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: blueberries 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

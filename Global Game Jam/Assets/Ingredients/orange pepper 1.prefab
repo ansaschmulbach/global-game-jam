@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4594562532131723943}
   - component: {fileID: 5687854289149888574}
   - component: {fileID: 6211538762613651525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: orange pepper 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

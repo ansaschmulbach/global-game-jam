@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4419532386327333524}
   - component: {fileID: 3489125641708768595}
   - component: {fileID: 4703911234816434122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasta 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

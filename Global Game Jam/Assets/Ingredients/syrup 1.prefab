@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1479281234267653093}
   - component: {fileID: 1853792492349998114}
   - component: {fileID: 7536076214897678011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: syrup 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
