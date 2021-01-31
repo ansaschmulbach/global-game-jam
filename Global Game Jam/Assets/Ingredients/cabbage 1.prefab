@@ -14,8 +14,13 @@ GameObject:
   - component: {fileID: 8462624056034987105}
   - component: {fileID: 1829261973551762841}
   - component: {fileID: 1270027753556729387}
+<<<<<<< HEAD
+  - component: {fileID: -4222419602259094083}
+  m_Layer: 8
+=======
   - component: {fileID: 878651592590245197}
   m_Layer: 0
+>>>>>>> bd0c9a5ff2c5ef7ce70ff57f7f83e8419dcd887c
   m_Name: cabbage 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +118,11 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 0100000002000000
+<<<<<<< HEAD
+  chopped: {fileID: 0}
+=======
   chopped: {fileID: 21300000, guid: f1dd30916188cc3bca27c819691d0671, type: 3}
+>>>>>>> bd0c9a5ff2c5ef7ce70ff57f7f83e8419dcd887c
 --- !u!114 &1829261973551762841
 MonoBehaviour:
   m_ObjectHideFlags: 0
