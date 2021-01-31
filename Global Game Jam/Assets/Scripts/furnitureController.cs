@@ -21,6 +21,7 @@ public class furnitureController : MonoBehaviour
         Debug.Log("Clicked");
         Vector3 pos = this.transform.position;
         player.target = new Vector3(pos.x, player.transform.position.y, player.transform.position.z);
+        player.setAnimator();
     }
 
     void OnMouseDown(){

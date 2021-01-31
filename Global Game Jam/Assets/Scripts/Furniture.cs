@@ -19,7 +19,6 @@ public class Furniture : MonoBehaviour
     public virtual void Select()
     {
         GameObject inv = gm.gameState.inventory;
-        Debug.Log(inv);
         if (inv != null && inv.TryGetComponent(out Ingredient ingredient) && !ingredient.cooked)
         {
             Vector3 pos = this.transform.position + offset;

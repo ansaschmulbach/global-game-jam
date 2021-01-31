@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Pantry/Pantry.unity
     guid: 6eba37041abfd40a4a729167df07ac39
+  - enabled: 1
+    path: Assets/Home/Home.unity
+    guid: e644852e001704d4b94a2549ce5f0f78
+  - enabled: 1
+    path: Assets/kitchen/Scenes/Cooking Test.unity
+    guid: bf400a5cee6bb4d5d953bcfd45d68b20
   m_configObjects: {}
