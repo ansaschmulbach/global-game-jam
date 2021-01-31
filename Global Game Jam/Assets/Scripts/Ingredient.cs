@@ -49,7 +49,7 @@ public abstract class Ingredient : MonoBehaviour
             
         }
     }
-    
+
     public abstract string GetRecipeLine();
     protected abstract void CookIngredient();
     
