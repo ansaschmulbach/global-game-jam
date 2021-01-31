@@ -10,8 +10,14 @@ public class OrderWindow : Furniture
         GameObject inv = GameManager.instance.gameState.inventory;
         if (inv != null)
         {
-            Ingredient ing = inv.GetComponent<Ingredient>();
-            if (ing.cooked)
+            Ingredient[] ings = inv.GetComponents<Ingredient>();
+            bool flag = false;
+            foreach (Ingredient ing in ings)
+            {
+                flag = flag || ing.cooked;
+            }
+            
+            if (flag)
             {
                 Collect(inv);
             }
@@ -27,7 +33,8 @@ public class OrderWindow : Furniture
     {
         GameState gs = GameManager.instance.gameState;
         gs.points += gs.inventory.GetComponent<Ingredient>().pointsEarned;
-        Debug.Log(GameManager.instance.gameState.points);
+        Debug.Log("hi");
+        Recipe.nextStep();
         Destroy(inv);
     }
     

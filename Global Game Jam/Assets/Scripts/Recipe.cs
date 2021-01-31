@@ -22,21 +22,23 @@ public class Recipe : MonoBehaviour
         }
     }
 
-    private Ingredient[] ingredientList;
+    private static List<GameObject> ingredientList;
     public static List<Step> currentRecipe;
     public static int currentStepIndex = 0;
     
     void Start()
     {
-        ingredientList = FindObjectsOfType<Ingredient>();
+        ingredientList = FindObjectOfType<IngredientsManager>().ingredientsPrefabs;
+        Debug.Log(ingredientList.Count);
         createNewRandomRecipe();
+        Debug.Log(currentRecipe[currentStepIndex]);
     }
 
-    private void createNewRandomRecipe()
+    private static void createNewRandomRecipe()
     {
         currentStepIndex = 0;
         currentRecipe = new List<Step>();
-            int numSteps = Random.Range(3, 7);
+        int numSteps = Random.Range(3, 7);
         for (int i = 0; i < numSteps; i++)
         {
             currentRecipe.Add(randomStep());
@@ -44,24 +46,26 @@ public class Recipe : MonoBehaviour
 
     }
 
-    private Step randomStep()
+    private static Step randomStep()
     {
-        int i = Random.Range(0, ingredientList.Length);
-        Ingredient ing = ingredientList[i];
+        int i = Random.Range(0, ingredientList.Count);
+        Ingredient ing = ingredientList[i].GetComponent<Ingredient>();
         int j = Random.Range(0, ing.validCommands.Count);
         Commands command = ing.validCommands[j];
         return new Step(command, ing);
     }
 
-    public void nextStep()
+    public static void nextStep()
     {
-        if (currentStepIndex == currentRecipe.Count)
+        if (currentStepIndex == currentRecipe.Count - 1)
         {
             createNewRandomRecipe();
         }
         else
         {
             currentStepIndex++;
+            Debug.Log(currentRecipe[currentStepIndex] + ", " 
+                                                      + GameManager.instance.gameState.points);
         }
             
     }
