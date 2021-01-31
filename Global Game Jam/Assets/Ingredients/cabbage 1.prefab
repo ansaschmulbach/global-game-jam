@@ -114,6 +114,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 0100000002000000
+  chopped: {fileID: 0}
 --- !u!114 &1829261973551762841
 MonoBehaviour:
   m_ObjectHideFlags: 0

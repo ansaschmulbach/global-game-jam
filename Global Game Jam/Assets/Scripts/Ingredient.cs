@@ -20,6 +20,7 @@ public abstract class Ingredient : MonoBehaviour
     {
         GameManager.instance.gameState.inventory = this.gameObject;
         GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Rigidbody2D>().isKinematic = true;
         Debug.Log(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
     }
