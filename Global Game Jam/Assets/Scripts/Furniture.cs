@@ -24,6 +24,7 @@ public class Furniture : MonoBehaviour
         {
             Vector3 pos = this.transform.position + offset;
             inv.transform.position = pos;
+            inv.transform.rotation = Quaternion.identity;
             inv.GetComponent<SpriteRenderer>().enabled = true;
             GetComponentInChildren<Utensil>().ing = inv;
             
