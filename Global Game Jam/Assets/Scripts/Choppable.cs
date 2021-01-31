@@ -20,7 +20,7 @@ public class Choppable : Ingredient
     }
 
     /** DEBUGGING PURPOSES ONLY **/
-    public override void Cook()
+    protected override void CookIngredient()
     {
         this.spriteR.color = Color.red;
         

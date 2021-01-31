@@ -14,6 +14,7 @@ public class furnitureController : MonoBehaviour
     void Start()
     {
         furniture = GetComponent<Furniture>();
+        player = GameObject.FindWithTag("Player").GetComponent<ClickMove>();
     }
     
     public void setPlayerTarget(){
