@@ -71,7 +71,7 @@ public class IngredientsPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int rand = random.Next(0, 100);
+        int rand = random.Next(0, 100000);
         int randNum = random.Next(low, high);
         int count = 0;
         if (rand == 20)
