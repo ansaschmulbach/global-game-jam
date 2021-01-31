@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 7216544274395198685}
   - component: {fileID: 7573041137793266459}
   - component: {fileID: 1744199112588763522}
-  - component: {fileID: 342145069129200888}
-  - component: {fileID: 1530346126255193329}
   - component: {fileID: 4402212814740950741}
   m_Layer: 0
   m_Name: cheese 1
@@ -102,7 +100,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 0200000000000000
-  chopped: {fileID: 0}
+  chopped: {fileID: 21300000, guid: bb27fe1128537635ca4f6e9f63bfe06b, type: 3}
 --- !u!61 &7573041137793266459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,76 +148,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &342145069129200888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216544274395198686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1530346126255193329}
-          m_MethodName: BeginDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 14
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1530346126255193329}
-          m_MethodName: EndDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1530346126255193329}
-          m_MethodName: Inventory
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1530346126255193329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216544274395198686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b46869cb5c034517b109df40f1c08d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4402212814740950741
 MonoBehaviour:
   m_ObjectHideFlags: 0

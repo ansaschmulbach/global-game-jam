@@ -19,11 +19,11 @@ public class Furniture : MonoBehaviour
     public virtual void Select()
     {
         GameObject inv = gm.gameState.inventory;
-        Debug.Log("Inventory: " + inv);
         if (inv != null && inv.TryGetComponent(out Ingredient ingredient) && !ingredient.cooked)
         {
             Vector3 pos = this.transform.position + offset;
             inv.transform.position = pos;
+            inv.transform.rotation = Quaternion.identity;
             inv.GetComponent<SpriteRenderer>().enabled = true;
             GetComponentInChildren<Utensil>().ing = inv;
             
