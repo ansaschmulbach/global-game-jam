@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void LoadPantry()
+    public void LoadPantry()
     {
-        
+        SceneManager.LoadScene("Pantry");
     }
 
     public void LoadKitchen()
