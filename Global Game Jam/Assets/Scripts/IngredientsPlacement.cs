@@ -43,7 +43,7 @@ public class IngredientsPlacement : MonoBehaviour
             }
             for (int j = 0; j < 10; j ++) {//ingredients
                 rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, 0), Quaternion.identity);
+                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
                 ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
                 count++;
@@ -59,7 +59,7 @@ public class IngredientsPlacement : MonoBehaviour
             }
             Console.WriteLine("hi");
             rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -5*127-50, 0), Quaternion.identity);
+                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -5*127-50, -1), Quaternion.identity);
                 ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
             count++;
@@ -71,7 +71,7 @@ public class IngredientsPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int rand = random.Next(0, 10000);
+        int rand = random.Next(0, 100);
         int randNum = random.Next(low, high);
         int count = 0;
         if (rand == 20)
@@ -80,8 +80,9 @@ public class IngredientsPlacement : MonoBehaviour
            foreach(GameObject i in instIngredients)
             {
                 //update position
-                i.transform.position = new Vector3(random.Next(100, 1110), -random.Next(0, 6) * 127 - 75, 0);
-                i.transform.SetParent(pantryFrame.transform, false);
+                //i.transform.position = new Vector3(random.Next(-500, 1110), -random.Next(0, 6) * 127 - 75, -1);
+                i.transform.position = new Vector3(random.Next(-150, 932), random.Next(-500, 200), 0);
+            i.transform.SetParent(pantryFrame.transform, false);
                 count++;
 
             }
