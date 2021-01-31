@@ -10,6 +10,7 @@ public class furnitureController : MonoBehaviour
 {
     public ClickMove player;
     private Furniture furniture;
+    public Vector3 offset;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class furnitureController : MonoBehaviour
     public void setPlayerTarget(){
         Debug.Log("Clicked");
         Vector3 pos = this.transform.position;
-        player.target = new Vector3(pos.x, player.transform.position.y, player.transform.position.z);
+        player.target = new Vector3(pos.x + offset.x, player.transform.position.y + offset.y, 
+            player.transform.position.z + offset.z);
         player.setAnimator();
     }
 

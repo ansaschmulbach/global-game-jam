@@ -6,7 +6,7 @@ public abstract class Utensil : MonoBehaviour
 {
     private GameManager gm;
     private Furniture parent;
-    private Ingredient ing;
+    public GameObject ing;
     
     void Start()
     {
@@ -14,22 +14,30 @@ public abstract class Utensil : MonoBehaviour
         parent = GetComponentInParent<Furniture>();
     }
     
-    public void Use()
+    public bool Use()
     {
         GameObject inv = gm.gameState.inventory;
         if (inv.TryGetComponent(out Ingredient ing) && !ing.cooked && Cook(inv))
         {
             gm.gameState.inventory = null;
+            return true;
         }
+
+        return false;
     }
 
     public abstract bool Cook(GameObject inv);
 
     private void OnMouseDown()
     {
-        if (parent.IsSelected() && gm.gameState.inventory)
+        if (parent.IsSelected() && gm.gameState.inventory && Use())
         {
-            Use();
+            Debug.Log("true");
+        }
+        else if (ing != null)
+        {
+            Ingredient ingredient = ing.GetComponent<Ingredient>();
+           ingredient.Inventory();
         }
     }
 }

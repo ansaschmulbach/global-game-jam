@@ -16,7 +16,7 @@ public abstract class Ingredient : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    void Inventory()
+    public void Inventory()
     {
         GameManager.instance.gameState.inventory = this.gameObject;
         GetComponent<SpriteRenderer>().enabled = false;
