@@ -18,6 +18,6 @@ public class ChangeScene : MonoBehaviour
 
     public void onClick()
     {
-        SceneManager.LoadScene("Kitchen");
+        GameManager.instance.LoadKitchen();
     }
 }
