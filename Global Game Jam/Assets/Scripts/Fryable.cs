@@ -14,7 +14,6 @@ public class Fryable : Ingredient
     private bool burned;
     private bool isDone;
     private SpriteRenderer spriteR;
-    [SerializeField] private string name;
 
     public override string GetRecipeLine()
     {
@@ -46,5 +45,9 @@ public class Fryable : Ingredient
         return timeOfFry > burnTime;
     }
 
+    protected override Commands getCommand()
+    {
+        return Commands.PAN_FRY;
+    }
 
 }
