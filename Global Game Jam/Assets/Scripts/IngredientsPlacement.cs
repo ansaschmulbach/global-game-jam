@@ -37,11 +37,12 @@ public class IngredientsPlacement : MonoBehaviour
  
         for(int i = 0; i < 5; i ++)// shelves
         {
-            if (count >= 20)
-            {
-                count = 0;
-            }
-            for (int j = 0; j < 10; j ++) {//ingredients
+            
+            for (int j = 0; j < 50; j ++) {//ingredients
+                if (count >= 20)
+                {
+                    count = 0;
+                }
                 rand = random.Next(low, high);
                 GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
                 ingredient.transform.SetParent(pantryFrame.transform, false);
@@ -51,7 +52,7 @@ public class IngredientsPlacement : MonoBehaviour
             
         }
 
-        for(int j = 0; j < 10; j ++) {//last shelf
+        for(int j = 0; j < 50; j ++) {//last shelf
             if (count >= 20)
             {
                 count = 0;
@@ -83,7 +84,7 @@ public class IngredientsPlacement : MonoBehaviour
                 //i.transform.position = new Vector3(random.Next(-500, 1110), -random.Next(0, 6) * 127 - 75, -1);
 
                 //i.transform.position = new Vector3(random.Next(-150, 932), random.Next(-500, 200), 0);
-                i.transform.position = new Vector3(random.Next(-9, 9), random.Next(-5, 7), 0);
+                i.transform.position = new Vector3(random.Next(-10, 10), random.Next(-5, 7), 0);
                 //i.transform.SetParent(pantryFrame.transform, false);
                 count++;
 
