@@ -17,7 +17,7 @@ public abstract class Utensil : MonoBehaviour
     public void Use()
     {
         GameObject inv = gm.gameState.inventory;
-        if (Cook(inv))
+        if (inv.TryGetComponent(out Ingredient ing) && !ing.cooked && Cook(inv))
         {
             gm.gameState.inventory = null;
         }
@@ -27,7 +27,7 @@ public abstract class Utensil : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (parent.IsSelected())
+        if (parent.IsSelected() && gm.gameState.inventory)
         {
             Use();
         }

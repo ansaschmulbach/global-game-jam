@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditorInternal;
 #endif
 
-public class fryable : MonoBehaviour
+public class Fryable : Ingredient
 {
     // Start is called before the first frame update
     private float timeOfFry;
@@ -14,10 +14,17 @@ public class fryable : MonoBehaviour
     private bool burned;
     private bool isDone;
     private SpriteRenderer spriteR;
-    void Start()
+    [SerializeField] private string name;
+
+    public override string GetRecipeLine()
+    {
+        return "Fry a " + name;
+    }
+
+    protected override void CookIngredient()
     {
         timeOfFry = 0.0f;
-        this.spriteR = GetComponent<SpriteRenderer>();
+        this.spriteR = GetComponent<SpriteRenderer>();   
     }
 
     // Update is called once per frame
@@ -39,8 +46,5 @@ public class fryable : MonoBehaviour
         return timeOfFry > burnTime;
     }
 
-    void OnMouseDown(){
-        Debug.Log("Clicked Pan!");
-        DestroyImmediate(gameObject);
-    }
+
 }

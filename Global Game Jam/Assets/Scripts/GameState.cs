@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameState
 {
-    public GameObject inventory;
-    public Furniture selectedFurniture;
+    public GameObject inventory = null;
+    public Furniture selectedFurniture = null;
+    public int points = 0;
 
 }

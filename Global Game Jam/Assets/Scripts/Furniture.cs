@@ -7,30 +7,31 @@ public class Furniture : MonoBehaviour
 
     private bool isSelected;
     private SpriteRenderer spriteRenderer;
-    private GameState gs;
+    private GameManager gm;
     [SerializeField] private Vector3 offset;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        gs = GameManager.instance.gameState;
+        gm = GameManager.instance;
     }
     
-    public void Select()
+    public virtual void Select()
     {
-        GameObject inv = gs.inventory;
-        if (inv != null && inv.TryGetComponent(out Ingredient ingredient))
+        GameObject inv = gm.gameState.inventory;
+        Debug.Log(inv);
+        if (inv != null && inv.TryGetComponent(out Ingredient ingredient) && !ingredient.cooked)
         {
             Vector3 pos = this.transform.position + offset;
             inv.transform.position = pos;
             inv.GetComponent<SpriteRenderer>().enabled = true;
             
-            if (gs.selectedFurniture != null)
+            if (gm.gameState.selectedFurniture != null)
             {
-                gs.selectedFurniture.Deselect();
+                gm.gameState.selectedFurniture.Deselect();
             }
 
-            gs.selectedFurniture = this;
+            gm.gameState.selectedFurniture = this;
             isSelected = true;
             spriteRenderer.color = Color.gray;
         }
