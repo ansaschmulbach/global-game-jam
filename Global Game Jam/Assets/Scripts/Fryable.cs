@@ -10,26 +10,36 @@ public class Fryable : Ingredient
     // Start is called before the first frame update
     private float timeOfFry;
     private float burnTime = 10.5f;
-    private float doneTime = 5f;
+    float doneTime = 5f;
     private bool burned;
     private bool isDone;
+    
     private SpriteRenderer spriteR;
+    public Sprite wellDoneImg;
 
     public override string GetRecipeLine()
     {
         return "Fry a " + name;
     }
 
+
+    void Start()
+    {
+        this.spriteR = GetComponent<SpriteRenderer>(); 
+    }
+
     protected override void CookIngredient()
     {
-        timeOfFry = 0.0f;
-        this.spriteR = GetComponent<SpriteRenderer>();   
+        Debug.Log("You catch more FRYs with honey :P");
+        this.spriteR.sprite = wellDoneImg;
     }
 
     // Update is called once per frame
+    
     public void UpdateCookTime()
     {
         timeOfFry += Time.deltaTime;
+        Debug.Log("Update Cook Time is Deprecated! Don't use it!");
 
         if (timeOfFry > burnTime && !burned) {
             burned = true; 
@@ -37,12 +47,8 @@ public class Fryable : Ingredient
             this.spriteR.color = Color.black;
         } else if (timeOfFry > doneTime && timeOfFry < burnTime){
             isDone = true;
-            this.spriteR.color = new Color(222f, 183f, 0f, 1f);
+            this.spriteR.sprite = wellDoneImg;
         }
-    }
-
-    bool isBurned(){
-        return timeOfFry > burnTime;
     }
 
     protected override Commands getCommand()
