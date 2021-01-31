@@ -49,7 +49,7 @@ public class Recipe : MonoBehaviour
    private static Step randomStep()
     {
         Ingredient ing = null;
-        while (ing == null)
+        while (ing == null || ing.validCommands.Count == 0)
         {
             int i = Random.Range(0, ingredientList.Count);
             ing = ingredientList[i].GetComponent<Ingredient>();
