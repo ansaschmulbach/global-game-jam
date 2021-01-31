@@ -23,6 +23,11 @@ public class IngredientDragDrop : MonoBehaviour
         }   
     }
     
+    private void OnCollisionEnter2D(Collision2D collision) {
+            dragging = false;
+
+    }
+
     /*
      * Credit to @troien on Unity forums for this method
      */

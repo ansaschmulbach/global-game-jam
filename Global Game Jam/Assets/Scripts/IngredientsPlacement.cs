@@ -71,22 +71,16 @@ public class IngredientsPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int rand = random.Next(1, 10000);
+        int rand = random.Next(0, 1000);
         int randNum = random.Next(low, high);
-        int shelfNum = 1;
         int count = 0;
         if (rand == 20)
         {
 
            foreach(GameObject i in instIngredients)
             {
-                if (count >= 10)
-                {
-                    count = 0;
-                    shelfNum++;
-                }
                 //update position
-                i.transform.position = new Vector3(randNum, -shelfNum * 127 - 75, 0);
+                i.transform.position = new Vector3(random.Next(100, 1110), -random.Next(0, 6) * 127 - 75, 0);
                 i.transform.SetParent(pantryFrame.transform, false);
                 count++;
 
