@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2754022375834809760}
   - component: {fileID: 6274705957921335097}
   - component: {fileID: 5749050661379266370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red pepper 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

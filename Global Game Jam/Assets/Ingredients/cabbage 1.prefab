@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8462624056034987105}
   - component: {fileID: 1829261973551762841}
   - component: {fileID: 1270027753556729387}
-  - component: {fileID: -4222419602259094083}
+  - component: {fileID: 878651592590245197}
   m_Layer: 8
   m_Name: cabbage 1
   m_TagString: Untagged
@@ -129,6 +129,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 
+  wellDoneImg: {fileID: 0}
 --- !u!50 &1270027753556729387
 Rigidbody2D:
   serializedVersion: 4

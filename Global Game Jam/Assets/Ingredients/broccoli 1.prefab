@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 929384713219759698}
   - component: {fileID: 6347531870279443091}
   - component: {fileID: 1056722142382157007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: broccoli 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 01000000
+  wellDoneImg: {fileID: 0}
 --- !u!114 &1056722142382157007
 MonoBehaviour:
   m_ObjectHideFlags: 0

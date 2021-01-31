@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5543733244098185883}
   - component: {fileID: 4450461415728142338}
   - component: {fileID: 7579584500885136579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: oil 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
