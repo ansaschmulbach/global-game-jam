@@ -220,7 +220,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 000000000100000002000000
-  chopped: {fileID: 0}
+  chopped: {fileID: 21300000, guid: e2843d4589d952e2381280ed6cf2f73d, type: 3}
 --- !u!114 &3171305724466739961
 MonoBehaviour:
   m_ObjectHideFlags: 0
