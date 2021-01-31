@@ -43,7 +43,7 @@ public class IngredientsPlacement : MonoBehaviour
         
         
         for (int j = 0; j < ingredients.Count; j ++) {//ingredients
-            //Debug.log(ingredients[j]);
+            Debug.Log(ingredients[j]);
             int tier = random.Next(-8, 8);
             rand = random.Next(-10, 10);
             //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
