@@ -147,6 +147,7 @@ MonoBehaviour:
   cooked: 0
   pointsEarned: 0
   validCommands: 01000000
+  wellDoneImg: {fileID: 0}
 --- !u!114 &1056722142382157007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,5 +162,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
+  validCommands: 01000000
   bakedImage: {fileID: 0}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5950028244940698093}
   - component: {fileID: 4523979029202504764}
   - component: {fileID: 3171305724466739961}
-  - component: {fileID: 8107194433709500194}
   - component: {fileID: 8671849732806923683}
   - component: {fileID: 97357026349575340}
   - component: {fileID: 4106325447142362051}
@@ -117,24 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
+  validCommands: 000000000200000001000000
   bakedImage: {fileID: 0}
---- !u!114 &8107194433709500194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5950028244940698095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1535f96643ecc9ad2b8cfe69c58b503e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooked: 0
-  pointsEarned: 0
-  validCommands: 
-  wellDoneImg: {fileID: 0}
 --- !u!58 &8671849732806923683
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -186,5 +169,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
+  validCommands: 010000000200000000000000
   wellDoneImg: {fileID: 21300000, guid: 2e4aa1c9d9444082b99d912f5c465696, type: 3}
