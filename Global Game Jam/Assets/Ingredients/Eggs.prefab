@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6086059675596994705}
   - component: {fileID: 1924626566666699000}
   - component: {fileID: 2908496266222915988}
+  - component: {fileID: -5282304399931651205}
   m_Layer: 8
   m_Name: Eggs
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 77.40853, y: 39.273315}
   m_EdgeRadius: 0
+--- !u!114 &-5282304399931651205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086059675596994711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1535f96643ecc9ad2b8cfe69c58b503e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 01000000

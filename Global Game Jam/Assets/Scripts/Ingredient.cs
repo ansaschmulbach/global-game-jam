@@ -3,27 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public abstract class Ingredient : MonoBehaviour
 {
     public bool cooked = false;
     public int pointsEarned = 0;
     public List<Commands> validCommands;
-    public string name;
 
     void Trash()
     {
         Destroy(this.gameObject);
     }
 
-    void Inventory()
+    public void Inventory()
     {
         GameManager.instance.gameState.inventory = this.gameObject;
         GetComponent<SpriteRenderer>().enabled = false;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Deinventory()
     {
+        Destroy(this.gameObject);
         GameManager.instance.gameState.inventory = null;
     }
 
@@ -54,13 +56,13 @@ public abstract class Ingredient : MonoBehaviour
     protected abstract void CookIngredient();
     
 
-    private void OnMouseDown()
-    {
-        if (GameManager.instance.gameState.inventory == null)
-        {
-            Inventory();   
-        }
-    }
+    // private void OnMouseDown()
+    // {
+    //     if (GameManager.instance.gameState.inventory == null)
+    //     {
+    //         Inventory();   
+    //     }
+    // }
 
     protected abstract Commands getCommand();
 

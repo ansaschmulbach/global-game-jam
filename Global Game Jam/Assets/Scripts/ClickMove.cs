@@ -16,9 +16,8 @@ public class ClickMove : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Hello!");
         this.playerAnimator = GetComponent<Animator>();
-        this.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
+        this.transform.position = new Vector3(0.0f, 3.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class ClickMove : MonoBehaviour
         float mSpeed = Input.GetAxis("Horizontal");
 
         float distance = (this.transform.position - target).x;
-        print(distance);
         playerAnimator.SetFloat("speed", Mathf.Abs(distance));
 
         if(distance < 0){
