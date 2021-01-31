@@ -20,6 +20,7 @@ public abstract class Ingredient : MonoBehaviour
     {
         GameManager.instance.gameState.inventory = this.gameObject;
         GetComponent<SpriteRenderer>().enabled = false;
+        Debug.Log(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -56,13 +57,13 @@ public abstract class Ingredient : MonoBehaviour
     protected abstract void CookIngredient();
     
 
-    // private void OnMouseDown()
-    // {
-    //     if (GameManager.instance.gameState.inventory == null)
-    //     {
-    //         Inventory();   
-    //     }
-    // }
+    private void OnMouseDown()
+    {
+        if (GameManager.instance.gameState.inventory == null)
+        {
+            Inventory();   
+        }
+    }
 
     protected abstract Commands getCommand();
 
