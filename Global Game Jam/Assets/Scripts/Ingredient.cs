@@ -21,7 +21,7 @@ public abstract class Ingredient : MonoBehaviour
         GameManager.instance.gameState.inventory = this.gameObject;
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Rigidbody2D>().isKinematic = true;
-        Debug.Log(this.gameObject);
+        Debug.Log(GetComponent<Rigidbody2D>().isKinematic);
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -38,9 +38,6 @@ public abstract class Ingredient : MonoBehaviour
         {
             CookIngredient();
             cooked = true;
-            Debug.Log("Inside Ingredient cook: " + 
-                      getCommand() + ", " + step.command + "; " + name + ", " +
-                      step.ingredient.name);
             if (getCommand() == step.command)
             {
                 pointsEarned += (int)(GameState.PointsPer * 0.5f);

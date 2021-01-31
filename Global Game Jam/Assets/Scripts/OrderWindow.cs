@@ -33,7 +33,6 @@ public class OrderWindow : Furniture
     {
         GameState gs = GameManager.instance.gameState;
         gs.points += gs.inventory.GetComponent<Ingredient>().pointsEarned;
-        Debug.Log("hi");
         Recipe.nextStep();
         Destroy(inv);
     }
