@@ -8,6 +8,8 @@ public abstract class Ingredient : MonoBehaviour
 {
     public bool cooked = false;
     public int pointsEarned = 0;
+    public List<Commands> validCommands;
+    public string name;
     
     /** DEBUGGING PURPOSES ONLY **/
     private void Update()
@@ -43,10 +45,21 @@ public abstract class Ingredient : MonoBehaviour
 
     public void Cook()
     {
+        Recipe.Step step = Recipe.currentRecipe[Recipe.currentStepIndex];
         if (!cooked)
         {
             CookIngredient();
             cooked = true;
+            if (getCommand() == step.command)
+            {
+                pointsEarned += (int)(GameState.PointsPer * 0.5f);
+            }
+
+            if (this == step.ingredient)
+            {
+                pointsEarned += (int)(GameState.PointsPer * 0.5f);
+            }
+            
         }
     }
     
@@ -61,4 +74,7 @@ public abstract class Ingredient : MonoBehaviour
             Inventory();   
         }
     }
+
+    protected abstract Commands getCommand();
+
 }

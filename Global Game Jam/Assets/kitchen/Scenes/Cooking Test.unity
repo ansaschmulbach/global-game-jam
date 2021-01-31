@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooked: 0
+  pointsEarned: 0
   name: tomato
 --- !u!58 &971574088
 CircleCollider2D:
@@ -929,6 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooked: 0
+  pointsEarned: 0
   name: tomato
 --- !u!58 &1147715463
 CircleCollider2D:
@@ -1408,6 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooked: 0
+  pointsEarned: 0
   name: tomato
 --- !u!58 &1565514384
 CircleCollider2D:
@@ -1760,7 +1763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758383416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.74, y: -0.84, z: 1}
+  m_LocalPosition: {x: 9.17, y: -0.21, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -25,7 +25,8 @@ public class OrderWindow : Furniture
 
     public void Collect(GameObject inv)
     {
-        GameManager.instance.gameState.points += 10;
+        GameState gs = GameManager.instance.gameState;
+        gs.points += gs.inventory.GetComponent<Ingredient>().pointsEarned;
         Debug.Log(GameManager.instance.gameState.points);
         Destroy(inv);
     }
