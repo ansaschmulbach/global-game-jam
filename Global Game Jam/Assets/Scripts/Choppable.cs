@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chop : Ingredient
+public class Choppable : Ingredient
 {
     
     [SerializeField] private string name;
