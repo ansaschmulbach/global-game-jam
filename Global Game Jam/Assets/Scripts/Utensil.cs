@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-public class Utensil : MonoBehaviour
+public abstract class Utensil : MonoBehaviour
 {
     private GameManager gm;
     private Furniture parent;
@@ -14,21 +14,22 @@ public class Utensil : MonoBehaviour
         parent = GetComponentInParent<Furniture>();
     }
     
-    public void Cook()
+    public void Use()
     {
         GameObject inv = gm.gameState.inventory;
-        if (inv.TryGetComponent(out Choppable chop))
+        if (Cook(inv))
         {
-            chop.Cook();
             gm.gameState.inventory = null;
         }
     }
+
+    public abstract bool Cook(GameObject inv);
 
     private void OnMouseDown()
     {
         if (parent.IsSelected())
         {
-            Cook();
+            Use();
         }
     }
 }
