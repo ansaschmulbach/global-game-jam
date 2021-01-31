@@ -46,7 +46,7 @@ public class Recipe : MonoBehaviour
 
     }
 
-    private static Step randomStep()
+   private static Step randomStep()
     {
         Ingredient ing = null;
         while (ing == null)

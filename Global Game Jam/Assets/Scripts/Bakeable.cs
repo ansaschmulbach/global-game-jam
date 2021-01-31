@@ -6,6 +6,7 @@ public class Bakeable : Ingredient
 {
     
     private SpriteRenderer spriteR;
+    public Sprite bakedImage;
     
     void Start()
     {
@@ -18,7 +19,7 @@ public class Bakeable : Ingredient
 
     protected override void CookIngredient()
     {
-        this.spriteR.color = Color.magenta;
+        this.spriteR.sprite= bakedImage;
     }
 
     public override string GetRecipeLine()
