@@ -32,24 +32,37 @@ public class IngredientsPlacement : MonoBehaviour
          */
 
         int rand = random.Next(low, high);
+        int count = 0;
         
  
         for(int i = 0; i < 5; i ++)// shelves
         {
-            for(int j = 0; j < 10; j ++) {//ingredients
+            if (count >= 20)
+            {
+                count = 0;
+            }
+            for (int j = 0; j < 10; j ++) {//ingredients
                 rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(tempIngredient, new Vector3(rand, -i*127-75, 0), Quaternion.identity);
+                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, 0), Quaternion.identity);
                 ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
+                count++;
             }
             
         }
 
         for(int j = 0; j < 10; j ++) {//last shelf
-                rand = random.Next(low, high);
-                GameObject ingredient = Instantiate(tempIngredient, new Vector3(rand, -5*127-50, 0), Quaternion.identity);
+            if (count >= 20)
+            {
+                count = 0;
+                Console.WriteLine("high");
+            }
+            Console.WriteLine("hi");
+            rand = random.Next(low, high);
+                GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -5*127-50, 0), Quaternion.identity);
                 ingredient.transform.SetParent(pantryFrame.transform, false);
                 instIngredients.Add(ingredient);
+            count++;
         }
         
     }
@@ -74,6 +87,7 @@ public class IngredientsPlacement : MonoBehaviour
                 }
                 //update position
                 i.transform.position = new Vector3(randNum, -shelfNum * 127 - 75, 0);
+                i.transform.SetParent(pantryFrame.transform, false);
                 count++;
 
             }
