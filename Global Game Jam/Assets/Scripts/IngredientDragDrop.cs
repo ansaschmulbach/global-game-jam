@@ -51,9 +51,10 @@ public class IngredientDragDrop : MonoBehaviour
 
     public void Inventory()
     {
-        if (!dragging)
+        Ingredient ing = gameObject.GetComponent<Ingredient>();
+        if (!dragging && ing != null)
         {
-            Destroy(this.gameObject);
+            ing.Inventory();
         }
     }
     

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1822399129428304788}
   - component: {fileID: 6307806912951180285}
   - component: {fileID: 7305257150417455761}
+  - component: {fileID: 8910114442721538880}
   m_Layer: 8
   m_Name: pumpkin
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 59.30117, y: 58.70813}
   m_EdgeRadius: 0
+--- !u!114 &8910114442721538880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822399129428304786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fbfe839e60c419eb7f54c8efdb9c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 00000000

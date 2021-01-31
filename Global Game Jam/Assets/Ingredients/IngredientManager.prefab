@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientsPrefabs:
-  - {fileID: 1408472517066591693, guid: 817e402388748417893703992f9b432a, type: 3}
+  - {fileID: 1239915055010077606, guid: 2e628c7ad0d3d404f9b1478ef667be31, type: 3}
   - {fileID: 7800295018809092739, guid: 08070bd44a8684a5f92d9c928c558d8a, type: 3}
   - {fileID: 8158966986934857343, guid: 03e5c274b1a434f189443f3b6db2d71a, type: 3}
   - {fileID: 1708824234319154910, guid: 4ea1a5632c987eb4eb30966311137eb5, type: 3}

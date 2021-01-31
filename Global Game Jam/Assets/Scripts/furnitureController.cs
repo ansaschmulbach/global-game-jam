@@ -19,7 +19,6 @@ public class furnitureController : MonoBehaviour
     }
     
     public void setPlayerTarget(){
-        Debug.Log("Clicked");
         Vector3 pos = this.transform.position;
         player.target = new Vector3(pos.x + offset.x, player.transform.position.y + offset.y, 
             player.transform.position.z + offset.z);

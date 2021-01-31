@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3528868320825392247}
   - component: {fileID: 9095773331731661854}
   - component: {fileID: 5535493474815628658}
+  - component: {fileID: 6893620453213275486}
   m_Layer: 8
   m_Name: cheese
   m_TagString: Untagged
@@ -195,3 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 53.419144, y: 28.48462}
   m_EdgeRadius: 0
+--- !u!114 &6893620453213275486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3528868320825392241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9404e6ec288744b4ba4156960072427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooked: 0
+  pointsEarned: 0
+  validCommands: 02000000
