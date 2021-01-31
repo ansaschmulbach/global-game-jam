@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class Choppable : Ingredient
 {
     
-    private Image spriteR;
+    private SpriteRenderer spriteR;
     public Sprite chopped;
 
     void Start()
     {
-        this.spriteR = this.GetComponent<Image>();
+        this.spriteR = this.GetComponent<SpriteRenderer>();
     }
 
     public override string GetRecipeLine()
