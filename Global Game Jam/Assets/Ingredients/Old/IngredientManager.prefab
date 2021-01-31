@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8349863291713168481}
   - component: {fileID: 8304816227861547740}
+  - component: {fileID: 4172492739262489773}
   m_Layer: 0
   m_Name: IngredientManager
   m_TagString: Untagged
@@ -65,3 +66,15 @@ MonoBehaviour:
   - {fileID: 8581211546743643883, guid: e8f0fb1c6a012440f98529e1fd1d92c4, type: 3}
   - {fileID: 1479281234267653095, guid: b04ff86e295a2461a976aedff7b932e7, type: 3}
   - {fileID: 5950028244940698095, guid: 9d2f2d4dd70c74899bfeb5b6ee014df3, type: 3}
+--- !u!114 &4172492739262489773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218306357844304382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e2eecae23c9467bae56d48cbe99189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

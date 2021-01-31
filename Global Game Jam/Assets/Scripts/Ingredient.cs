@@ -53,23 +53,16 @@ public abstract class Ingredient : MonoBehaviour
 
     public abstract string GetRecipeLine();
     protected abstract void CookIngredient();
-    
+
 
     private void OnMouseDown()
     {
         if (GameManager.instance.gameState.inventory == null)
         {
-            Inventory();   
+            Inventory();
         }
     }
-
-    private void OnMouseDrag()
-    {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-        transform.position = curPosition;
-
-    }
+    
 
     protected abstract Commands getCommand();
 
