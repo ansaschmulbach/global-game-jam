@@ -14,7 +14,7 @@ public class Bakeable : Ingredient
     }
     protected override Commands getCommand()
     {
-        return Commands.OVEN;
+        return Commands.Bake;
     }
 
     protected override void CookIngredient()

@@ -51,7 +51,7 @@ public class Fryable : Ingredient
 
     protected override Commands getCommand()
     {
-        return Commands.PAN_FRY;
+        return Commands.Stirfry;
     }
 
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum Commands 
 {
-    OVEN,
-    PAN_FRY,
-    CHOP,
-    BOIL
+    Bake,
+    Stirfry,
+    Chop,
+    Boil
 
 }

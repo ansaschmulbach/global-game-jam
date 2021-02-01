@@ -28,6 +28,6 @@ public class Choppable : Ingredient
 
     protected override Commands getCommand()
     {
-        return Commands.CHOP;
+        return Commands.Chop;
     }
 }
