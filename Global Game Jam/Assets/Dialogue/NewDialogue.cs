@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class DialogueBox : MonoBehaviour
-{
 
+public class NewDialogue : MonoBehaviour
+{
     [SerializeField] private List<string> dialogueText;
     private int index;
     private int changeIndex;
@@ -37,10 +37,11 @@ public class DialogueBox : MonoBehaviour
             {
                 SceneManager.LoadScene(nextScene);
             } 
-            if(changed[index]) {
-                changeSprite(spriteInts[changeIndex]);
-                changeIndex++;
-            }
+            changeSprite(spriteInts[index]);
+            // if(changed[index]) {
+            //     changeSprite(spriteInts[changeIndex]);
+            //     changeIndex++;
+            // }
             dialogueBox.text = dialogueText[index];
         }
     }

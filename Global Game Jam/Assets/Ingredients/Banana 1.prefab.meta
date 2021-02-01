@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Global Game Jam/Assets/Ingredients/Banana 1.prefab.meta
+guid: 2e628c7ad0d3d404f9b1478ef667be31
+=======
 guid: 4c9f49d003dd84c6dbbfe7968f2faede
+>>>>>>> 4d276e8af3066fb545db2d70f24609b524c74232:Global Game Jam/Assets/Scenes.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
