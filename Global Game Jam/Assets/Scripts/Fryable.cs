@@ -39,8 +39,6 @@ public class Fryable : Ingredient
     public void UpdateCookTime()
     {
         timeOfFry += Time.deltaTime;
-        Debug.Log("Update Cook Time is Deprecated! Don't use it!");
-
         if (timeOfFry > burnTime && !burned) {
             burned = true; 
             isDone = false;

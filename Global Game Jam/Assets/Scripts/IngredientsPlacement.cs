@@ -8,7 +8,7 @@ using UnityEngine;
 public class IngredientsPlacement : MonoBehaviour
 {
 
-    private const int NumPerShelf = 10;
+    private const int NumPerShelf = 15;
     private List<GameObject> ingredients;
     public GameObject pantryFrame;
     public GameObject tempIngredient;
@@ -43,7 +43,6 @@ public class IngredientsPlacement : MonoBehaviour
         
         
         for (int j = 0; j < ingredients.Count; j ++) {//ingredients
-            Debug.Log(ingredients[j]);
             int tier = random.Next(-8, 8);
             rand = random.Next(-10, 10);
             //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
