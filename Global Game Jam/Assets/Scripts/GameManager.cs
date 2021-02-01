@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadKitchen()
     {
-        SceneManager.LoadScene("Cooking Test");
+        SceneManager.LoadScene("Kitchen");
     }
     
 }

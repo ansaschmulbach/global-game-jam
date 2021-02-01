@@ -55,12 +55,17 @@ public abstract class Ingredient : MonoBehaviour
 
     public abstract string GetRecipeLine();
     protected abstract void CookIngredient();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d276e8af3066fb545db2d70f24609b524c74232
 
     private void OnMouseUp()
     {
         Console.WriteLine("hi");
         if (Time.time - downClickTime <= ClickDeltaTime)
         {
+<<<<<<< HEAD
             if (GameManager.instance.gameState.inventory == null)
             {
                 Inventory();
@@ -89,6 +94,12 @@ public abstract class Ingredient : MonoBehaviour
      */
 
 
+=======
+            Inventory();
+        }
+    }
+    
+>>>>>>> 4d276e8af3066fb545db2d70f24609b524c74232
 
     protected abstract Commands getCommand();
 
