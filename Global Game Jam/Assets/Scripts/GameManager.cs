@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public GameState gameState = new GameState();
+    public MusicManager jukebox;
 
     void Awake()
     {
@@ -38,4 +39,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Kitchen");
     }
     
+    public void cookingSong() //Cue the song that plays while you're cooking
+    {
+        jukebox.playSong1();
+    }
+
+    public void chillSong() //Cue the song that plays in dialogue
+    {
+        jukebox.playSong2();
+    }
 }
