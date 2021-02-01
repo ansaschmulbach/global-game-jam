@@ -6,6 +6,8 @@ public class displayInventory : MonoBehaviour
 {
     [SerializeField]
     public Image image;
+    [SerializeField]
+    public Sprite empty;
     //private Image m_Image;
     //Set this in the Inspector
     
@@ -18,7 +20,10 @@ public class displayInventory : MonoBehaviour
 
     void Update()
     {
-        image.sprite = GameManager.instance.gameState.inventory.GetComponent<SpriteRenderer>().sprite;
-        
+        if(GameManager.instance.gameState.inventory == null){
+            image.sprite = empty;
+        } else {
+            image.sprite = GameManager.instance.gameState.inventory.GetComponent<SpriteRenderer>().sprite;
+        }
     }
 }
