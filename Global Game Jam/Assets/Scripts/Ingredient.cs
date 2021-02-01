@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public abstract class Ingredient : MonoBehaviour
 {
@@ -41,13 +43,19 @@ public abstract class Ingredient : MonoBehaviour
             if (getCommand() == step.command)
             {
                 pointsEarned += (int)(GameState.PointsPer * 0.5f);
+                Debug.Log("Gained cook points!");
             }
 
-            if (this.name.Equals(step.ingredient.name))
+            if (name.Equals(step.ingredient.name) || (name).Equals(step.ingredient.name + "(Clone)"))
             {
                 pointsEarned += (int)(GameState.PointsPer * 0.5f);
+                Debug.Log("Gained name points!");
             }
-            
+            else
+            {
+                Debug.Log(name + ", " + step.ingredient.name);
+            }
+
         }
     }
 
