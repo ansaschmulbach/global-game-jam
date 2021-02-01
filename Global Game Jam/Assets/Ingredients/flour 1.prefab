@@ -145,5 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
+  validCommands: 01000000
   wellDoneImg: {fileID: 21300000, guid: 192123ba5a1772f89979f76291c8787a, type: 3}

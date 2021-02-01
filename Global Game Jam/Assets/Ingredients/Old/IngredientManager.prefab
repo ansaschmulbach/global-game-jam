@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientsPrefabs:
-  - {fileID: 1239915055010077606, guid: 2e628c7ad0d3d404f9b1478ef667be31, type: 3}
+  - {fileID: 1408472517066591693, guid: 817e402388748417893703992f9b432a, type: 3}
   - {fileID: 2962013098351781198, guid: 8a690d1e10c12464b9775dc3087ac380, type: 3}
   - {fileID: 8140015991602514702, guid: fb6327283937f40efacc6151ae2978b4, type: 3}
-  - {fileID: 4035333668084443279, guid: e3e1427bdf3514b3c8f15bf7e0e2e068, type: 3}
+  - {fileID: 1708824234319154910, guid: 4ea1a5632c987eb4eb30966311137eb5, type: 3}
   - {fileID: 7295803314361938863, guid: 00392fea2f8cf47caaf775c06fc2bee3, type: 3}
   - {fileID: 7216544274395198686, guid: 1596192a1bdc747e888aebb46c628a4c, type: 3}
   - {fileID: 1764606139953797613, guid: 24e6ee89e718e4577ac08246d8169228, type: 3}

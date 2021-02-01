@@ -10,6 +10,8 @@ public abstract class Ingredient : MonoBehaviour
     public bool cooked = false;
     public int pointsEarned = 0;
     public List<Commands> validCommands;
+    private float downClickTime;
+    private float ClickDeltaTime = 0.2F;
 
     void Trash()
     {
@@ -53,23 +55,40 @@ public abstract class Ingredient : MonoBehaviour
 
     public abstract string GetRecipeLine();
     protected abstract void CookIngredient();
+
+    private void OnMouseUp()
+    {
+        Console.WriteLine("hi");
+        if (Time.time - downClickTime <= ClickDeltaTime)
+        {
+            if (GameManager.instance.gameState.inventory == null)
+            {
+                Inventory();
+            }
+
+        }
+    }
     
 
     private void OnMouseDown()
     {
-        if (GameManager.instance.gameState.inventory == null)
-        {
-            Inventory();   
-        }
+        downClickTime = Time.time;
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
+        transform.position = curPosition;
     }
 
-    private void OnMouseDrag()
+    /*
+     * private void OnMouseDrag()
     {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
         transform.position = curPosition;
 
     }
+     */
+
+
 
     protected abstract Commands getCommand();
 

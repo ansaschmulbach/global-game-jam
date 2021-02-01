@@ -162,5 +162,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
+  validCommands: 01000000
   bakedImage: {fileID: 0}

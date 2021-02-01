@@ -146,8 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
-  bakedImage: {fileID: 21300000, guid: c653edab51fe94b6e96f346b9ae2c00e, type: 3}
+  validCommands: 0000000001000000
+  bakedImage: {fileID: 0}
 --- !u!114 &2390787467504606163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,5 +162,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooked: 0
   pointsEarned: 0
-  validCommands: 
-  wellDoneImg: {fileID: 0}
+  validCommands: 0000000001000000
+  wellDoneImg: {fileID: 21300000, guid: c653edab51fe94b6e96f346b9ae2c00e, type: 3}
