@@ -42,13 +42,20 @@ public class IngredientsPlacement : MonoBehaviour
         int count = 0;
         
         
-        for (int j = 0; j < ingredients.Count; j ++) {//ingredients
+        for (int j = 0; j <250; j ++) {//ingredients
+            //Debug.Log(ingredients[j]);
+            if (count > ingredients.Count -1 )
+            {
+                count = 0;
+            }
             int tier = random.Next(-8, 8);
             rand = random.Next(-10, 10);
             //GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, -i*127-75, -1), Quaternion.identity);
-            GameObject ingredient = Instantiate(ingredients[j], new Vector3(rand, tier, 0), Quaternion.identity);
+            GameObject ingredient = Instantiate(ingredients[count], new Vector3(rand, tier, 0), Quaternion.identity);
             // ingredient.transform.SetParent(pantryFrame.transform, false);
             instIngredients.Add(ingredient);
+            count++;
+            Debug.Log(j);
             
         }
     } 
